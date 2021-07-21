@@ -15,9 +15,8 @@ public class App
 {	
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
         ApplicationContext ctx = new AnnotationConfigApplicationContext(LogicalExampleConfiguration.class);
-//        ILogicalExample logicalExample = (ILogicalExample) ctx.getBean("testExample1ByR");
-//        logicalExample.run("Rahul");
+        ILogicalExample logicalExample = (ILogicalExample) ctx.getBean("duplicateCharacters");
+        logicalExample.run("cdefcdefgh");
     }
 }
