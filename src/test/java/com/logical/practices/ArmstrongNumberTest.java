@@ -2,8 +2,6 @@ package com.logical.practices;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.Scanner;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,10 +25,11 @@ class ArmstrongNumberTest {
 	
 	@Test
 	public void armstrongNumberTest1() {
-		System.out.println("Enter no to check armstrong numbers");
-		Scanner s = new Scanner(System.in);
-		int no = s.nextInt();
-		boolean flag = this.armstrongNumber.isArmStrong(no);
-		assertEquals(true, flag);
+		assertEquals(true, this.armstrongNumber.isArmStrong(153));
+		assertEquals(true, this.armstrongNumber.isArmStrong(371));
+		assertEquals(true, this.armstrongNumber.isArmStrong(9474));
+		assertEquals(true, this.armstrongNumber.isArmStrong(54748));
+		assertEquals(true, this.armstrongNumber.isArmStrong(407));
+		assertEquals(false, this.armstrongNumber.isArmStrong(1674));
 	}
 }

@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Scanner;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +30,7 @@ class ReversePalindromTest {
 		System.out.println("Enter the String: ");
 		Scanner s = new Scanner(System.in);
 		String str = s.next();
+		s.close();
 		boolean flag = this.reversePalindrome.isPalindrom(str);
 		assertEquals(true, flag);
 	}
@@ -40,6 +40,7 @@ class ReversePalindromTest {
 		System.out.println("Enter the No: ");
 		Scanner s = new Scanner(System.in);
 		long no = s.nextLong();
+		s.close();
 		boolean flag = this.reversePalindrome.isPalindrom(no);
 		assertEquals(true, flag);
 	}

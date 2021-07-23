@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Scanner;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +33,7 @@ class SwapNumberWithoutThirdVariableTest {
 		
 		System.out.println("Enter b");
 		int b = s.nextInt();
-		
+		s.close();
 		snwtv.setA(a);
 		snwtv.setB(b);
 		

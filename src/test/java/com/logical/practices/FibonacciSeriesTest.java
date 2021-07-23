@@ -30,6 +30,7 @@ class FibonacciSeriesTest {
 	public void fibonacciSeriesTest1() {
 		Scanner s1 = new Scanner(System.in);
 		int size = s1.nextInt();
+		s1.close();
 		long[] fibonacciArrayActual = fib.getFibonacciSeries(size);
 		for(int i=0; i<fibonacciArrayActual.length; i++) {
 			System.out.println(fibonacciArrayActual[i]);

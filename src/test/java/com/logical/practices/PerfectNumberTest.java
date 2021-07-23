@@ -30,6 +30,7 @@ class PerfectNumberTest {
 		System.out.println("Enter the number to check perfect number logic");
 		Scanner s = new Scanner(System.in);
 		long no = s.nextLong();
+		s.close();
 		boolean flag = pNo.isPerfectNumber(no);
 		assertEquals(true, flag);
 	}

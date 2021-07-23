@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +32,7 @@ public class PrimeNumberTest {
 		System.out.println("Enter size for prime numbers");
 		Scanner s = new Scanner(System.in);
 		int size = s.nextInt();
+		s.close();
 		List<Long> primeNumbers = this.primeNumber.getPrimeNumbers(size);
 		
 		System.out.println();
